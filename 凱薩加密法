@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+    string code, new_code;
+    cout << "輸入密碼(限英文大小寫及數字16碼以內):";
+    cin >> code;
+    for (int x = 0; x < 16; x++) {
+        if (code[x] == 122) {
+           new_code = 97;
+        }
+        else if (code[x] == 90) {
+                new_code = 65;
+        }
+        else if (code[x] == 57) {
+                new_code = 48;
+        }
+        else if (code[x] == 0) {
+                new_code = "";
+        }
+        else {
+             new_code = code[x] + 1;
+        }
+        cout << new_code;
+    }
+}
