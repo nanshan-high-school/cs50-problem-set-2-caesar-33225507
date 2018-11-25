@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main() {
+    string code, new_code;
+    int key;
+    cout << "輸入明文(限英文大小寫及數字16碼以內):";
+    cin >> code;
+    cout << "輸入密鑰(1~6):";
+    cin >> key;
+    cout << "=================================> ";
+    for (int x = 0; x < 16; x++) {
+        if (code[x] + key > 122) {
+           new_code = code[x] - 26 + key;
+        }
+        else if ((code[x] + key <= 122) && (code[x] + key > 97)) {
+                new_code = code[x] + key;
+        }
+        else if ((code[x] + key <= 97) && (code[x] + key > 90)) {
+                new_code = code[x] - 26 + key;
+        }
+        else if ((code[x] + key <= 90) && (code[x] + key > 65)) {
+                new_code = code[x] + key;
+        }
+        else if ((code[x] + key <= 65) && (code[x] + key > 57)) {
+                new_code = code[x] - 10 + key;
+        }
+        else if (code[x] == 0) {
+                new_code = "";
+        }
+        else {
+             new_code = code[x] + key;
+        }
+        cout << new_code;
+    }
+}
