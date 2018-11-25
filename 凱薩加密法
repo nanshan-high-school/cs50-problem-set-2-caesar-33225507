@@ -2,8 +2,9 @@
 using namespace std;
 int main() {
     string code, new_code;
-    cout << "輸入密碼(限英文大小寫及數字16碼以內):";
+    cout << "輸入明文(限英文大小寫及數字16碼以內):";
     cin >> code;
+    cout << "=================================> ";
     for (int x = 0; x < 16; x++) {
         if (code[x] == 122) {
            new_code = 97;
