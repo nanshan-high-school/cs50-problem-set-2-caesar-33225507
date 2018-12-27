@@ -9,19 +9,19 @@ int main() {
     cin >> key;
     cout << "=================================> ";
     for (int x = 0; x < 16; x++) {
-        if (code[x] + key > 122) {
+        if (code[x] + key > 'z') {
            new_code = code[x] - 26 + key;
         }
-        else if ((code[x] + key <= 122) && (code[x] + key > 97)) {
+        else if ((code[x] + key <= 'z') && (code[x] + key > 'a')) {
                 new_code = code[x] + key;
         }
-        else if ((code[x] + key <= 97) && (code[x] + key > 90)) {
+        else if ((code[x] + key <= 'a') && (code[x] + key > 'Z')) {
                 new_code = code[x] - 26 + key;
         }
-        else if ((code[x] + key <= 90) && (code[x] + key > 65)) {
+        else if ((code[x] + key <= 'Z') && (code[x] + key > 'A')) {
                 new_code = code[x] + key;
         }
-        else if ((code[x] + key <= 65) && (code[x] + key > 57)) {
+        else if ((code[x] + key <= 'A') && (code[x] + key > '9')) {
                 new_code = code[x] - 10 + key;
         }
         else if (code[x] == 0) {
